@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600&display=swap");
+$font-stack: 'Montserrat', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+
+.font-nunito {
+    font-family: $font-nunito;
+}
+
+.navbar-light {
+    .nav-link:focus , .nav-link:hover {
+        color: #31B34B !important;
+    }
+}
+.navbar {
+    .nav-link {
+        font-size: 12px;
+    }
+    .text-brand {
+        font-family: $font-stack;
+    }
+    font-weight: bold;
+    
+}
+
+figure {
+    overflow: hidden;
+    margin: 0;
+    img {
+        display: block;
+    }
+}
+
+.change-ratio {
+    img {
+        margin: -5% 0;
+    }
+}
+
+.jumbotron {
+    .btn-success:hover{
+        background-color: honeydew;
+        color: green;
+        border-color: green;
+    }
+    background-color: transparent !important;
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    z-index: 2;
+}

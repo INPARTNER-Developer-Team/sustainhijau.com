@@ -2,8 +2,7 @@
   "name": "octobercms",
   "description": "Free, open-source, self-hosted CMS platform based on the Laravel PHP Framework.",
   "directories": {
-    "test": "tests/js/cases",
-    "helpers": "tests/js/helpers"
+    "test": "tests"
   },
   "scripts": {
     "test": "mocha --require @babel/register tests/js/cases/**/*.js"
@@ -13,19 +12,9 @@
     "url": "git+https://github.com/octobercms/october.git"
   },
   "contributors": [
-    {
-      "name": "Alexey Bobkov",
-      "email": "aleksey.bobkov@gmail.com"
-    },
-    {
-      "name": "Samuel Georges",
-      "email": "daftspunky@gmail.com"
-    },
-    {
-      "name": "Luke Towers",
-      "email": "octobercms@luketowers.ca",
-      "url": "https://luketowers.ca"
-    }
+    "Alexey Bobkov <aleksey.bobkov@gmail.com>",
+    "Samuel Georges <daftspunky@gmail.com>",
+    "Luke Towers <octobercms@luketowers.ca> (https://luketowers.ca)"
   ],
   "license": "MIT",
   "bugs": {
@@ -42,7 +31,17 @@
     "chai": "^4.2.0",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
+    "laravel-elixir": "^6.0.0-18",
+    "laravel-elixir-livereload": "^1.1.6",
     "mocha": "^6.2.0",
     "sinon": "^7.4.1"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "keywords": [
+    "Laravel",
+    "Elixir"
+  ],
+  "author": "Syahrian Adil"
 }
