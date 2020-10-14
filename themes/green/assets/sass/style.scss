@@ -2,8 +2,17 @@
 $font-stack: 'Montserrat', sans-serif;
 $font-nunito: 'Nunito', sans-serif;
 
+
+
 .font-nunito {
     font-family: $font-nunito;
+    color: #FFFFFF;
+}
+
+.font-lato {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
 }
 
 .navbar-light {
@@ -37,13 +46,20 @@ figure {
 }
 
 .jumbotron {
-    .btn-success:hover{
-        background-color: honeydew;
-        color: green;
-        border-color: green;
-    }
+    background-image: url('../../images/main-bg.png');
     background-color: transparent !important;
 }
+        .btn-green:hover{
+            background-color: honeydew !important;
+            color: #79B925 !important;
+            border-color: #79B925 !important;
+        }
+        .btn-green{
+            padding: 5px 30px 5px 30px !important;
+            background-color: #79B925 !important;
+            border-color: #79B925 !important;
+        }
+
 
 .square {
     width: 250px;
@@ -52,4 +68,98 @@ figure {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     z-index: 2;
+}
+
+
+
+.img-fluid{
+    max-width: 70%;
+}
+
+#after-pillars{
+    margin-top: 100px;
+
+    .image img{
+        box-shadow: 20px 20px rgba(110, 183, 41, 0.30);
+    }
+
+
+}
+
+footer{
+    background-color: #2C2C2C;
+    color: white;
+    margin-top: 50px;
+
+    p{
+        text-align: left;
+        margin: 50px;
+        font-size: 12px;
+    }
+}
+
+.square-box{
+    position: relative;
+    width: 100%;
+    // height: 50%;
+    overflow: hidden;
+    background: #2BAF57;
+    border-radius: 7px;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 30%;
+    padding-left: 100%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.square-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white
+}
+
+
+
+
+//Articles & Media Social
+
+#articles-medsos{
+    background: linear-gradient(180deg, #2ACF61 0%, #2BAF57 100%);
+
+    .header{
+        font-weight: bold;
+        font-style: normal;
+        // font-size: 2rem;
+        color: white;
+        // position: static;
+        
+    }
+
+    .col-sm{
+        margin-top: 70px;
+    }
+
+    .square-article{
+        position: absolute;
+        // height: 100%;
+        width: 50%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        z-index: 2;
+    }
 }

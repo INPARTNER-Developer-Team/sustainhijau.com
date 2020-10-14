@@ -5,7 +5,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha --require @babel/register tests/js/cases/**/*.js"
+    "test": "mocha --require @babel/register tests/js/cases/**/*.js",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
