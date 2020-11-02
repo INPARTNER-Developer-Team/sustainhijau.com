@@ -1,0 +1,11 @@
+plugin:
+    name: 'shi.contact::lang.plugin.name'
+    description: 'shi.contact::lang.plugin.description'
+    author: AHI
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Contact
+        url: shi/contact/contact
+        icon: icon-envelope

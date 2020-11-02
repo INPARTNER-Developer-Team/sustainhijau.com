@@ -11,5 +11,6 @@ elixir(function(mix){
     mix.scripts([
         'jquery.js',
         'app.js'
+        
     ]);
 })

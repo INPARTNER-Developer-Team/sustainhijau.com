@@ -1,11 +1,11 @@
 # Composer ignores
-/vendor
+
 composer.phar
 composer.lock
 
 # Framework ignores
 .env
-.env.*.php
+.env.*.php       
 .env.php
 selenium.php
 /bootstrap/compiled.php
