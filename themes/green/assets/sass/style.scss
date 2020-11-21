@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600;400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
 $font-stack: 'Montserrat',
 sans-serif;
 $font-nunito: 'Nunito',
@@ -83,6 +86,13 @@ figure {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     // z-index: 2;
+
+
+}
+
+.square:hover .square-content-pillars-inner{
+    transform: rotateY(180deg);
+
 }
 
 // .square:before {
@@ -91,6 +101,34 @@ figure {
 //     padding-top: 20%;
 //     padding-left: 50%;
 // }
+
+.square-content-pillars, .square-content-pillars-back{
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.square-content-pillars-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .square-content-pillars-back{
+    transform: rotateY(180deg);
+    vertical-align: middle;
+    margin-top: 40px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    
+    display: table-cell;
+    position: absolute;
+  }
 
 .square-content-pillars {
     display: table-cell;
@@ -228,9 +266,12 @@ footer {
 
     }
 
+
     img{
-        width: 500px;
+        width: 100%;
+        height: 35vh;
         border-radius: 10px;
+        object-fit: cover;
     }
 
     .thumb{
@@ -269,6 +310,73 @@ footer {
 }
 
 //client
+
+#projects{
+    background: url('../../images/projects/bg.png') ;
+
+    .header {
+        font-weight: bold;
+        font-style: normal;
+        // font-size: 2rem;
+        color: white;
+        // position: static;
+
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 35vh;
+        object-fit: cover;
+        }
+
+    .thumb{
+        // overflow: hidden;
+        height: 250px;
+        overflow: hidden;
+    }
+
+
+
+    // img{
+    //     width: 500px;
+    //     border-radius: 10px;
+    // }
+
+    // .thumb{
+    //     // overflow: hidden;
+    //     height: 250px;
+    //     overflow: hidden;
+    // }
+
+    .col-sm {
+        margin-top: 70px;
+        // position: absolute;
+    }
+
+    .square-article {
+        // position: absolute;
+        // height: 100%;
+        width: 85%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .btn{
+        padding: 5px 30px 5px 30px !important;
+        background-color: #eecc46 !important;
+        border-color: #eecc46 !important;
+    
+    }
+
+    .btn:hover{
+        padding: 5px 30px 5px 30px !important;
+        background-color: #c5c7c2 !important;
+        border-color: #d1d1d1 !important;
+    }
+
+}
 
 .square-client {
     // position: absolute;
