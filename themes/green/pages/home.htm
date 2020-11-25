@@ -181,57 +181,7 @@ function onStart(){
 
 </section>
 
-<section id="article-medsos">
-    <div class="container-fluid  p-5" id="articles-medsos">
-        <div class="font-lato h2 header font-weight-bold text-center ">Articles and Media Social</div>
 
-        <div class="row text-center pb-5">
-            
-            
-
-            {% for post in posts %}
-            {% if post.categories[0].pivot.category_id == 3 %}
-            {% if post.id == post.categories[0].pivot.post_id %}
-            
-            <div class="col-sm">
-
-                {% if  post.content_images[0].path == null  %}
-                <div class="thumb">
-                    <img src="{{'assets/images/Article-medsos/medsos1.png' | theme}}" class="img-fluid" alt="">
-                </div>
-                {% else %}
-                <div class="thumb">
-                    <img src="{{post.content_images[0].path}}" class="img-fluid " alt="">
-                </div>
-
-                {% endif %}
-                
-                <div class="d-flex justify-content-center" style="margin-top:-5em;">
-                    <div class="square-article mx-1 py-4">
-                        <h6 class="mb-3 font-lato font-weight-bold">{{post.title}}</h6>
-                        <p class="m-3 font-lato" style="font-weight: 400;">
-                            {{str_limit(post.summary|striptags|raw, 50)}}
-                        </p>
-                        <a href="{{post.url}}" class="font-lato font-weight-bold" style="color: #ED4C5C;">Read More</a>
-                    </div>
-                </div>
-
-            </div>
-
-            {% else %}
-            <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-
-        </div>
-
-        <div class="row justify-content-center">
-            <a href="/blogs" class="btn  ">Show More</a>
-        </div>
-
-    </div>
-</section>
 
 <section id="project">
     <div class="container-fluid  p-5" id="projects">
@@ -430,6 +380,58 @@ function onStart(){
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </div>
+</section>
+
+<section id="article-medsos">
+    <div class="container-fluid  p-5" id="articles-medsos">
+        <div class="font-lato h2 header font-weight-bold text-center ">Articles</div>
+
+        <div class="row text-center pb-5">
+            
+            
+
+            {% for post in posts %}
+            {% if post.categories[0].pivot.category_id == 3 %}
+            {% if post.id == post.categories[0].pivot.post_id %}
+            
+            <div class="col-sm">
+
+                {% if  post.content_images[0].path == null  %}
+                <div class="thumb">
+                    <img src="{{'assets/images/Article-medsos/medsos1.png' | theme}}" class="img-fluid" alt="">
+                </div>
+                {% else %}
+                <div class="thumb">
+                    <img src="{{post.content_images[0].path}}" class="img-fluid " alt="">
+                </div>
+
+                {% endif %}
+                
+                <div class="d-flex justify-content-center" style="margin-top:-5em;">
+                    <div class="square-article mx-1 py-4">
+                        <h6 class="mb-3 font-lato font-weight-bold">{{post.title}}</h6>
+                        <p class="m-3 font-lato" style="font-weight: 400;">
+                            {{str_limit(post.summary|striptags|raw, 50)}}
+                        </p>
+                        <a href="{{post.url}}" class="font-lato font-weight-bold" style="color: #ED4C5C;">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+
+            {% else %}
+            <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+        </div>
+
+        <div class="row justify-content-center">
+            <a href="/blogs" class="btn  ">Show More</a>
+        </div>
+
     </div>
 </section>
 

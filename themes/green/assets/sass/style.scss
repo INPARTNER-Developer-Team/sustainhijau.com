@@ -203,7 +203,32 @@ footer {
     a {
         color: #E3BB97;
         font-size: 14px;
-        ;
+        text-decoration: none !important;
+        
+        &:hover{
+            color: rgb(211, 211, 39);
+        }
+    
+    }
+
+    .r{
+        a {
+            color: #433529 !important;
+            // font-size: 14px;
+            ;
+        }
+    }
+
+    .icon-top{
+        color: #d8955a !important;
+    }
+
+    a.icon-link{
+        text-decoration: none !important;
+
+        &:before{
+            content: none;
+        }
     }
 }
 
