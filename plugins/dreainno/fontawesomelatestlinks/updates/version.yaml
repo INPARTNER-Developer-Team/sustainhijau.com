@@ -1,0 +1,9 @@
+1.0.1:
+    - Initialize plugin.
+    - populate_settings.php
+1.0.2:
+    - link key name fixed.
+    - update_settings1.2.php
+1.0.3:
+    - Intigrity attribute issue solved.
+    - update_settings1.3.php
