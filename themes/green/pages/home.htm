@@ -202,7 +202,7 @@ function onStart(){
                 <div class="card">
 
                     {% if  post.content_images[0].path == null  %}
-                    <img class="card-img-top " src="{{'assets/images/Article-medsos/medsos1.png' | theme}}"
+                    <img class="card-img-top " src="{{'assets/images/bg/article-default-img.jpg' | theme}}"
                         alt="Card image cap">
                     {% else %}
                     <img class="card-img-top" src="{{post.content_images[0].path}}" alt="Card image cap">
@@ -402,7 +402,7 @@ function onStart(){
 
                 {% if  post.content_images[0].path == null  %}
                 <div class="thumb">
-                    <img src="{{'assets/images/Article-medsos/medsos1.png' | theme}}" class="img-fluid" alt="">
+                    <img src="{{'assets/images/bg/article-default-img.jpg' | theme}}" class="img-fluid" alt="">
                 </div>
                 {% else %}
                 <div class="thumb">
