@@ -90,7 +90,7 @@ figure {
 
 }
 
-.square:hover .square-content-pillars-inner{
+.square:hover .square-content-pillars-inner {
     transform: rotateY(180deg);
 
 }
@@ -102,8 +102,10 @@ figure {
 //     padding-left: 50%;
 // }
 
-.square-content-pillars, .square-content-pillars-back{
-    -webkit-backface-visibility: hidden; /* Safari */
+.square-content-pillars,
+.square-content-pillars-back {
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
 }
 
@@ -114,9 +116,9 @@ figure {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+}
 
-  .square-content-pillars-back{
+.square-content-pillars-back {
     transform: rotateY(180deg);
     vertical-align: middle;
     margin-top: 40px;
@@ -125,10 +127,10 @@ figure {
     bottom: 0;
     right: 0;
     padding: 10px;
-    
+
     display: table-cell;
     position: absolute;
-  }
+}
 
 .square-content-pillars {
     display: table-cell;
@@ -168,7 +170,7 @@ figure {
     margin-top: 100px;
 
     .image img {
-        
+
         box-shadow: 10px 10px 10px 10px rgba(110, 183, 41, 0.30);
     }
 
@@ -204,14 +206,14 @@ footer {
         color: #E3BB97;
         font-size: 14px;
         text-decoration: none !important;
-        
-        &:hover{
+
+        &:hover {
             color: rgb(211, 211, 39);
         }
-    
+
     }
 
-    .r{
+    .r {
         a {
             color: #433529 !important;
             // font-size: 14px;
@@ -219,14 +221,14 @@ footer {
         }
     }
 
-    .icon-top{
+    .icon-top {
         color: #d8955a !important;
     }
 
-    a.icon-link{
+    a.icon-link {
         text-decoration: none !important;
 
-        &:before{
+        &:before {
             content: none;
         }
     }
@@ -292,14 +294,14 @@ footer {
     }
 
 
-    img{
+    img {
         width: 100%;
         height: 35vh;
         border-radius: 10px;
         object-fit: cover;
     }
 
-    .thumb{
+    .thumb {
         // overflow: hidden;
         height: 250px;
         overflow: hidden;
@@ -320,14 +322,14 @@ footer {
         z-index: 2;
     }
 
-    .btn{
+    .btn {
         padding: 5px 30px 5px 30px !important;
         background-color: #eecc46 !important;
         border-color: #eecc46 !important;
-    
+
     }
 
-    .btn:hover{
+    .btn:hover {
         padding: 5px 30px 5px 30px !important;
         background-color: #c5c7c2 !important;
         border-color: #d1d1d1 !important;
@@ -336,8 +338,8 @@ footer {
 
 //client
 
-#projects{
-    background: url('../../images/projects/bg.png') ;
+#projects {
+    background: url('../../images/projects/bg.png');
 
     .header {
         font-weight: bold;
@@ -352,9 +354,9 @@ footer {
         width: 100%;
         height: 35vh;
         object-fit: cover;
-        }
+    }
 
-    .thumb{
+    .thumb {
         // overflow: hidden;
         height: 250px;
         overflow: hidden;
@@ -388,14 +390,14 @@ footer {
         z-index: 2;
     }
 
-    .btn{
+    .btn {
         padding: 5px 30px 5px 30px !important;
         background-color: #eecc46 !important;
         border-color: #eecc46 !important;
-    
+
     }
 
-    .btn:hover{
+    .btn:hover {
         padding: 5px 30px 5px 30px !important;
         background-color: #c5c7c2 !important;
         border-color: #d1d1d1 !important;
@@ -507,7 +509,7 @@ footer {
     text-align: center;
     padding-top: 10rem;
     padding-bottom: 10rem;
-    text-shadow: 2px 2px #000;
+    text-shadow: 1px 1px #000;
 }
 
 .overlay {
@@ -521,9 +523,43 @@ footer {
     z-index: -1;
 }
 
+.image-wrap{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+
+    img{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+      }
+  }
+  
+  .blog-item{
+
+      a:link, a:active, a:visited{
+          color: #46A049;
+          background-color: transparent;
+          text-decoration: none;
+        }
+
+        a:hover, a:active{
+            color: rgb(36, 213, 36);
+            background-color: transparent;
+            text-decoration: none;
+        }
+    }
+
+
 //about
-.about{
-    h2{
+.about {
+    h2 {
         text-align: center;
         margin-bottom: 30px;
     }
@@ -531,16 +567,16 @@ footer {
 
 
 //post
-.user-bg{
+.user-bg {
     // background: url('../../images/main-bg.png') no-repeat center center;
     background-color: transparent !important;
     background-size: cover;
     background-position: 0 60%;
 }
 
-.content-blog{
+.content-blog {
 
-    img{
+    img {
         max-width: 75%;
         border-radius: 2rem;
         margin: 0 auto;

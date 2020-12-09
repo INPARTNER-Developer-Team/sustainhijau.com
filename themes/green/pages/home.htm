@@ -5,7 +5,6 @@ is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 3
 noPostsMessage = "No posts found"
 sortOrder = "created_at desc"
 categoryPage = "blog-post"
@@ -193,8 +192,12 @@ function onStart(){
             <div class="card-deck">
 
 
-                {% for post in posts %}
-                {% if post.categories[0].pivot.category_id == 2 %}
+                {% for post in posts if post.categories[0].pivot.category_id == 2  %}
+                
+                    
+                
+
+                {% if loop.index <= 3 %}
                 {% if post.id == post.categories[0].pivot.post_id %}
                 <div class="card">
 
@@ -205,18 +208,18 @@ function onStart(){
                     <img class="card-img-top" src="{{post.content_images[0].path}}" alt="Card image cap">
                     {% endif %}
                     <div class="card-body">
-                        <h5 href="{{post.url}}" class="card-title">{{post.title}} </h5>
+                        <h5 href="{{post.url}}" class="card-title">{{str_limit(post.title|striptags|raw, 30)}}</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
-                        <div class="card-footer">
+                        <!-- <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+                        </div> -->
                         <a href="{{post.url}}" class="stretched-link"></a>
                     </div>
                 </div>
 
-                {% else %}
-                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+
+              
                 {% endif %}
                 {% endif %}
                 {% endfor %}
@@ -225,7 +228,7 @@ function onStart(){
         </div>
 
         <div class="row justify-content-center">
-            <a href="/blogs" class="btn  ">Show More</a>
+            <a href="/blogs/Project" class="btn  ">Show More</a>
         </div>
 
     </div>
@@ -389,10 +392,10 @@ function onStart(){
 
         <div class="row text-center pb-5">
             
-            
 
-            {% for post in posts %}
-            {% if post.categories[0].pivot.category_id == 3 %}
+            {% for post in posts if post.categories[0].pivot.category_id == 3 %}
+
+            {% if loop.index <= 3 %}
             {% if post.id == post.categories[0].pivot.post_id %}
             
             <div class="col-sm">
@@ -410,7 +413,7 @@ function onStart(){
                 
                 <div class="d-flex justify-content-center" style="margin-top:-5em;">
                     <div class="square-article mx-1 py-4">
-                        <h6 class="mb-3 font-lato font-weight-bold">{{post.title}}</h6>
+                        <h6 class="mb-3 font-lato font-weight-bold">{{str_limit(post.title|striptags|raw, 30)}}</h6>
                         <p class="m-3 font-lato" style="font-weight: 400;">
                             {{str_limit(post.summary|striptags|raw, 50)}}
                         </p>
@@ -420,16 +423,15 @@ function onStart(){
 
             </div>
 
-            {% else %}
-            <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
             {% endif %}
             {% endif %}
             {% endfor %}
+        
 
         </div>
 
         <div class="row justify-content-center">
-            <a href="/blogs" class="btn  ">Show More</a>
+            <a href="/blogs/Article" class="btn  ">Show More</a>
         </div>
 
     </div>

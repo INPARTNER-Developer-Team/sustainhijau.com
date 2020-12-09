@@ -71,7 +71,8 @@ figure img {
   transform: rotateY(180deg);
 }
 
-.square-content-pillars, .square-content-pillars-back {
+.square-content-pillars,
+.square-content-pillars-back {
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
@@ -362,7 +363,7 @@ footer a.icon-link:before {
   text-align: center;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  text-shadow: 2px 2px #000;
+  text-shadow: 1px 1px #000;
 }
 
 .overlay {
@@ -374,6 +375,36 @@ footer a.icon-link:before {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+.image-wrap {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.image-wrap img {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}
+
+.blog-item a:link, .blog-item a:active, .blog-item a:visited {
+  color: #46A049;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.blog-item a:hover, .blog-item a:active {
+  color: #24d524;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .about h2 {

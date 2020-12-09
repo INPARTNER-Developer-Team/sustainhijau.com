@@ -1,10 +1,11 @@
 title = "Blogs"
-url = "/blogs/:page?"
+url = "/blogs/:slug?/:page?"
 layout = "default"
 is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
 postsPerPage = 2
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
@@ -14,7 +15,7 @@ postPage = "blog-post"
 <div class=" jumbotron df-bg bg-cover">
     <div class="overlay"></div>
     <div class="container">
-        <h1 class="display-3 mb-1">Articles</h1>
+        <h1 class="display-3 mb-1">{{ blogPosts.category.name}}</h1>
         <!-- <p class="lead">Posted on <span>23 September 2017</span></p> -->
     </div>
 </div>
@@ -26,17 +27,23 @@ postPage = "blog-post"
     <ul class="post-list">
         {% for post in posts %}
         <div class="row mt-3">
-            <div class="col-3">
-                <img class="img-fluid w-70" src="{{post.content_images[0].path}}">
+            <div class="col-4">
+                <div class="image-wrap">
+                    {% if  post.content_images[0].path == null  %}
+                    <img src="{{'assets/images/bg/article-default-img.jpg' | theme}}"></img>
+                    {% else %}
+                    <img  src="{{post.content_images[0].path}}">
+                    {% endif %}
+                </div>
             </div>
-            <div class="col-sm">
+            <div class="col-sm blog-item mt-3">
 
                 <li>
                     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 
                     <p class="info">
                         {% if post.categories.count %}
-                        {% set categoryLinks = post.categories | map(c => "<a href=\"#{c.url}\">#{c.name}</a>") | join(', ') %}
+                        {% set categoryLinks = post.categories | map(c => "<a  style=\"font-weight: bold;\">#{c.name}</a>") | join(', ') %}
 
                         {{ 'rainlab.blog::lang.post.posted_byline' | trans({
                         date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans),
