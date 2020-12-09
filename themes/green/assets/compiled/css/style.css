@@ -396,7 +396,7 @@ footer a.icon-link:before {
 }
 
 .blog-item a:link, .blog-item a:active, .blog-item a:visited {
-  color: #46A049;
+  color: #1d1c1c;
   background-color: transparent;
   text-decoration: none;
 }
