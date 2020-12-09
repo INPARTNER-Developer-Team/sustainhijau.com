@@ -1,6 +1,0 @@
-plugin:
-    name: 'shi.project::lang.plugin.name'
-    description: 'shi.project::lang.plugin.description'
-    author: SHI
-    icon: oc-icon-briefcase
-    homepage: ''

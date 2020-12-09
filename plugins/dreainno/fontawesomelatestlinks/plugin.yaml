@@ -1,6 +1,0 @@
-plugin:
-    name: 'dreainno.fontawesomelatestlinks::lang.plugin.name'
-    description: 'dreainno.fontawesomelatestlinks::lang.plugin.description'
-    author: Dreainno
-    icon: oc-icon-external-link
-    homepage: ''
