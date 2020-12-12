@@ -148,7 +148,6 @@ footer h6 {
 
 footer .p {
   color: #E3BB97;
-  text-align: left;
   font-size: 14px;
   font-weight: 400;
 }
@@ -309,6 +308,22 @@ footer a.icon-link:before {
   padding: 5px 30px 5px 30px !important;
   background-color: #c5c7c2 !important;
   border-color: #d1d1d1 !important;
+}
+
+#group {
+  background: rgba(227, 228, 228, 0.59);
+}
+
+#group a:link, #group a:active, #group a:visited {
+  color: #1d1c1c;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#group a:hover, #group a:active {
+  color: #24d524;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .square-client {

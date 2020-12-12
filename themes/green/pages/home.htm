@@ -30,7 +30,7 @@ function onStart(){
         <img src="{{'assets/images/64609.jpg'|theme}}" width="325px" height="396px" style="position: absolute; right: 200px; top: 0; z-index: 0;">
     </div> -->
     <div class="container position-relative">
-        <h1 class="display-4 font-nunito ml-3 mt-3" style="z-index: 1;">Sustainibilitas<br>Hijau<br>Indonesia</h1>
+        <h1 class="display-4 font-nunito ml-3 mt-3" style="z-index: 1;">Sustainabilitas<br>Hijau<br>Indonesia</h1>
         <a href="/about" class="btn btn-success btn-green ml-3 mt-3" style="z-index: 1;">Explore</a>
     </div>
     <div style="margin: 104px;"></div>
@@ -109,7 +109,7 @@ function onStart(){
     <div class="container mb-5" id="after-pillars">
         <div class="row">
             <div class="col-sm mb-5">
-                <h2 class="font-nunito text-dark p-1">Sustainibilitas Hijau Indonesia</h2>
+                <h2 class="font-nunito text-dark p-1">Sustainabilitas Hijau Indonesia</h2>
                 <p class="font-nunito text-dark text-justify p-1" style="margin-top: 25px;">Through our
                     knowledge,
                     technology, and across
@@ -162,7 +162,7 @@ function onStart(){
                         <div>
                             <img src="{{'assets/images/two-pillars/02.png' | theme}}" class="img-fluid w-50" alt="">
                         </div>
-                        <h6 style="font-weight: bold;">Climatee Change Mmitigations</h6>
+                        <h6 style="font-weight: bold;">Climate Change Mitigations</h6>
 
                     </div>
                 </div>
@@ -193,9 +193,9 @@ function onStart(){
 
 
                 {% for post in posts if post.categories[0].pivot.category_id == 2  %}
-                
-                    
-                
+
+
+
 
                 {% if loop.index <= 3 %}
                 {% if post.id == post.categories[0].pivot.post_id %}
@@ -209,8 +209,7 @@ function onStart(){
                     {% endif %}
                     <div class="card-body">
                         <h5 href="{{post.url}}" class="card-title">{{str_limit(post.title|striptags|raw, 30)}}</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">{{str_limit(post.summary|striptags|raw, 50)}}</p>
                         <!-- <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
                         </div> -->
@@ -219,7 +218,7 @@ function onStart(){
                 </div>
 
 
-              
+
                 {% endif %}
                 {% endif %}
                 {% endfor %}
@@ -236,7 +235,7 @@ function onStart(){
 
 <section id="client" class="mt-5">
     <div class="container-fluid">
-        <div class="font-lato h2 header font-weight-bold text-center ">Our Client</div>
+        <div class="font-lato h2 header font-weight-bold text-center ">Our Clients</div>
 
         <!-- <div class=""> -->
         <!-- </div> -->
@@ -278,11 +277,7 @@ function onStart(){
                             </div>
 
 
-                            <div class="col-sm align-self-end">
-                                <img src="{{'assets/images/client/wardah.png' | theme}}" alt="">
-                                <h6>Beauty Cosmetics</h6>
 
-                            </div>
                             <div class="col-sm align-self-end">
                                 <img src="{{'assets/images/client/berdikari.png' | theme}}" alt="">
                                 <h6>Poultry & Cattle Farm</h6>
@@ -304,11 +299,11 @@ function onStart(){
                             </div>
 
                             <div class="col-sm align-self-end">
-                                <img src="{{'assets/images/client/power-plant-business.jpg' | theme}}"
-                                    style="width: 35%;" alt="">
-                                <h6>Power Plant Business</h6>
+                                <img src="{{'assets/images/client/wardah.png' | theme}}" alt="">
+                                <h6>Beauty Cosmetics</h6>
 
                             </div>
+
                             <div class="col-sm align-self-end">
                                 <img src="{{'assets/images/client/palm-oil-business.png' | theme}}" style="width: 35%;"
                                     alt="">
@@ -386,18 +381,43 @@ function onStart(){
     </div>
 </section>
 
+<section id="group" class="mt-5">
+    <div class="container p-3">
+        <div class="font-lato h2 header font-weight-bold text-center">Our Group</div>
+        <div class="row text-center justify-content-center mt-4">
+            <div class="col-3">
+                <a href="https://eiindonesia.co.id">
+                    <div>
+                        <img style="width: 60%" src="{{'assets/images/group/logo_EII.png' | theme}}"></img>
+                    </div>
+                    <p>Energi Insfrastruktur Indonesia</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://inovasitp.com/">
+                    <div>
+                        <img style="width: 40%" src="{{'assets/images/group/itp.png' | theme}}"></img>
+                    </div>
+                    <p>Engineering, Procurement, and Construction</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <section id="article-medsos">
     <div class="container-fluid  p-5" id="articles-medsos">
         <div class="font-lato h2 header font-weight-bold text-center ">Articles</div>
 
         <div class="row text-center pb-5">
-            
+
 
             {% for post in posts if post.categories[0].pivot.category_id == 3 %}
 
             {% if loop.index <= 3 %}
             {% if post.id == post.categories[0].pivot.post_id %}
-            
+
             <div class="col-sm">
 
                 {% if  post.content_images[0].path == null  %}
@@ -410,7 +430,7 @@ function onStart(){
                 </div>
 
                 {% endif %}
-                
+
                 <div class="d-flex justify-content-center" style="margin-top:-5em;">
                     <div class="square-article mx-1 py-4">
                         <h6 class="mb-3 font-lato font-weight-bold">{{str_limit(post.title|striptags|raw, 30)}}</h6>
@@ -426,7 +446,7 @@ function onStart(){
             {% endif %}
             {% endif %}
             {% endfor %}
-        
+
 
         </div>
 
